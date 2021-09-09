@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Webpage</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo" alt="logo">
+            <nav>
+                <!-- <p>hiiii</p> -->
+                <ul id="menuList">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu" alt="menu icon" >
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <h2>Product Name</h2>
+                <h3>Short Description</h3>
+                <p>(version)</p>
+                <h4>$price</h4>
+                <button type="button">Buy Now <img src="images/arrow.png"></button>
+            </div>
+            <div class="col-2">
+                <img src="images/controller.png" class="pro-img">
+                <div class="color-box"></div>
+                <div class="add-btn">
+                    <img src="images/add.png"><p><small>add to cart</small></p></button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="social-media">
+            <img src='images/fb.png'>
+            <img src='images/tw.png'>
+            <img src='images/ig.png'>
+        </div>
+    </div>
+<script>
+    var btn = document.querySelector('.menu');
+    var menuList = document.querySelector('#menuList');
+    var row = document.querySelector(".row");
+    menuList.style.maxHeight = '0px';
+    btn.addEventListener('click', function(e){
+        if(menuList.style.maxHeight == '0px'){
+            menuList.style.maxHeight='130px';
+            row.style.margin='135px 0';
+        }
+        else{
+            menuList.style.maxHeight='0px';
+            row.style.margin='30px 0';
+        }
+
+    });
+
+</script>
+
+
+    
+</body>
+</html>
